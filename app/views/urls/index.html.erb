@@ -1,4 +1,8 @@
 <h1>Here are all the URLS</h1>
+<%= form_for @url do |f| %>
+  <%= f.text_field :long %>
+  <%= f.submit %>
+<% end %>
 <% @urls.each do |url| %>
-  <p> <%= url.long %> <%= url.short %></p>
+  <p><%= url.long %> <a href="/<%= url.short %>"><%= url.short %></a></p>
 <% end %>
